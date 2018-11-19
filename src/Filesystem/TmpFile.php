@@ -21,7 +21,7 @@ class TmpFile extends File
      * @param string $path The directory where the temporary filename will be created
      * @param int $mode File permissions
      */
-    public function __construct(string $prefix = '', string $path = TMP, int $mode = 0755)
+    public function __construct($prefix = '', $path = TMP, $mode = 0755)
     {
         $file = tempnam($path, $prefix);
         // Shutdown function runs in case of an error.
